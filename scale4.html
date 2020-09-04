@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpoint" content="width=device-width, intial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SCALE 4 CGPA CAL</title>
+	<link rel="stylesheet" type="text/css" href="cgpa.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+</head>
+<body>
+	<div class="main">
+		<div class="intro">
+			<center>
+              	<a href=""><img class="homeLogo" src="dev5.jfif" width="230px" height="185px"></a>
+              	<p><a class="guideline" href="">Cumulative Grade Point Average(CGPA)</a></p>
+              	
+        	</center>
+		</div>
+		
+		<!-- Inputing of Courses goes here-->
+		<div class="row" id="wrapper">
+			<div class="col-md-6" style="border-style: groove; padding:5px;" >
+				<center>
+					<h2 style="border-bottom: 1px solid #a8a8a8; padding:10px;">Add or Upload Your Course</h2>
+				</center>
+				<ul style="padding-left: 20px;">
+					<div>
+						<input class="courses" id="uploadFile" name="file" type="file">
+					</div>
+
+					<li class="form-inline">
+						<input style="background-color: #eef4f7;" class="form-control mr-sm-2" type="text" placeholder="Enter Course Code" name="course_code" id="course_code">
+                        <button class= "" id="addBtn"  onclick="addItem()">Add</button>
+                        <p style="color: #b2beb5;">Please note that credit units with -1 are invalid. So kindly change them to appropriate units</p>
+                    </li>   
+                </ul>
+			</div> 
+
+			<!--Added courses goes here-->
+			 <div class="col-md-6" style=" border: 1px; padding:5px; border-style: inset;">
+			 	
+                <form name="myForm" onsubmit="return calculateGP();">
+                	<ul style="border-bottom: 1px" id="dynamic-list"> 
+           			<h2 id="count" align="center" style=" margin-left: -40px; border-bottom: 1px solid #a8a8a8; padding:5px; ">Queued Courses(0)</h2>
+        			</ul>
+        			<center>
+        				<button class="calBtn" style="background-color: red; width: 40%; color: white; margin: 10px;">Calculate</button>
+       				</center>
+       			</form>
+       		</div> 		
+		</div>
+	</div>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- The Modal Content-->
+		<div class="modal-content">
+			<span class="close">×</span>
+			<div id="summary"></div>	
+		</div>
+	</div>
+
+	<!-- Footer Work Start Here -->
+	<div class="mainFooter">
+		<footer>
+				
+		</footer>	
+	</div>
+
+
+	<!-- Importing Javascript File -->
+	<script type= "text/javascript" src = "scale4.js"></script>
+	<script src="pdf.js"></script>
+
+</body>
+</html>
